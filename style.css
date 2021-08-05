@@ -75,6 +75,7 @@ html, body {
 	border:groove;
 	border-radius: 10px;
 	border-color: gold;
+	opacity: 1;
 }
 .thumbnail > * > * {
 	width: 100%;
