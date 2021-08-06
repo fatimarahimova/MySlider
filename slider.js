@@ -77,7 +77,7 @@ document.addEventListener('keyup', function (event) {
 //* if left arrow key is pressed from keyboard;
 //* show the previous image
 
-	else if(key==='ArrowLeft' || key==37){
+	else if(key==='ArrowLeft' || key===37){
 		prevButton();
 	}
 });
