@@ -40,8 +40,6 @@ html, body {
 .thumbnail > * {
 	width: 75px;
 	padding: 3px;
-	color: red;
-        font-weight: bold;
 	animation-duration: 1s;
 	animation-name: slidein;
 }
