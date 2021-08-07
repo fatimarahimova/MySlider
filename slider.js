@@ -12,15 +12,15 @@ let images=["https://images.hepsiburada.net/banners/s/0/672-378/bannerImage2065_
 	  		"https://images.hepsiburada.net/banners/s/0/672-378/bannerImage2164_20210518210149.png/format:webp"]
 
 
-let currID=0; //current ID of images
+let currID=0; //current ID of image
 
 /**
  * Set the correct big image to the slider
  *
- * @param {number} ID The ID of  each thumbnail photo.
+ * @param {number} ID: The ID of  each thumbnail photo.
  * 
- * @return {number} In HTML file, unique ID of each thumbnail photo is sending to SetIMG function.
- * 					SetIMG function show selected thumbnail image as big image in the main slide screen.
+ * @return 		   In HTML file, unique ID of each thumbnail photo is sending to SetIMG function.
+ * 				   SetIMG function shows selected thumbnail image as big image in the main slide screen.
  */
 
 function SetIMG(ID){
@@ -32,31 +32,23 @@ function SetIMG(ID){
 		allimgs[i].classList.remove('activeImage');
 		i++;
 	}
-	currID=ID;
 	
+	currID=ID;
 	let activeImage = allimgs[currID];
 	activeImage.classList.add('activeImage'); 
 }
 
-/**
- * When right arrow button in slider is clikced, next image is showing
- */
-
 function prevButton(){
-	if(currID==0){ //if the first image is showing, go to the last photo
-		currID=images.length;
-	}
+	if(currID==0){ 
+		prevButton.style.display = "none"
+    }
 	currID--;
 	SetIMG(currID);
 }
 
-/**
- * When left arrow button in slider is clikced, previous image is showing
- */
 function nextButton(){
-	if(currID==images.length-1){ // if the last photo is showing go to the first photo
-		currID=-1;
-	}
+	if(currID==images.length-1){ 
+		nextButton.style.display = "none"} 
 	currID++;
 	SetIMG(currID);
 }
